@@ -1,0 +1,5 @@
+Only two weeks into the quarter, it seems as though I'm spending as much time getting the unit test to run as I do on the driver class. Getting the build path configured properly did not go as smoothly as I would have liked. Eventually, however, I got it working.
+
+After I got the unit test to work, I noticed that I was failing one of the tests. Specifically, I was failing the "testConstructorNegativeSalary" test. I'm glad I noticed that, because I hadn't seen (or had forgotten) any instructions regarding the validation of data during object instantiation.
+
+The mutator method, setMonthlySalary, accepts a floating-point argument which it assigns to the instance variable named "monthlySalary." It will reject any value less than zero (i.e., negative numbers). My choice was between calling the mutator method from the class constructor, or adding the same capability to the constructor. Although the result was a bit of redundant code, I chose the latter. I didn't want to get in the habit of calling class methods from the constructor.
